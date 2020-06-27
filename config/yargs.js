@@ -1,4 +1,4 @@
-const options = {
+const opts = {
     base: {
         demand: true,
         alias: 'b'
@@ -10,10 +10,10 @@ const options = {
 }
 
 const argv = require('yargs')
-    .command('listar', 'Imprime en consola la tabla de multiplicar', options)
-    .command('crear', 'Crea un archivo con la tabla de multiplicar', options)
+    .command('listar', 'Imprime en consola la tabla de multiplicar', opts)
+    .command('crear', 'Genera un archivo con la tabla de multiplicar', opts)
     .help()
-    .argv;
+    .argv
 
 module.exports = {
     argv
